@@ -10,6 +10,14 @@
     max-height: 400px;
     min-width: 100px;
     background-color: white;
+    transition: all .3s;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .4);
+}
+
+.product:hover {
+    transform: scale(1.03);
+
+
 }
 
 .product > img {
@@ -33,6 +41,7 @@
     border-color: #a88734 #9c7e31 #846a29;
     margin-top: 10px;
     color: #111;
+    cursor: pointer;
 
 }
 .product__price {
