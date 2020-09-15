@@ -42,8 +42,12 @@
     margin-top: 10px;
     color: #111;
     cursor: pointer;
-
+    transform: scaleY(1);
+    transition: all .3s;
+    outline: none;
+    height: 30px;
 }
+
 .product__price {
     margin-top: 5px;
 
