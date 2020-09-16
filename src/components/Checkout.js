@@ -14,9 +14,9 @@ const Checkout = () => {
                      src="https://images-na.ssl-images-amazon.com/images/G/02/UK_CCMP/TM/OCC_Amazon1._CB423492668_.jpg" alt=""
                 />
                 <div className='checkout__title'>
-                    <h3>Hello, {user?.email}</h3>
+                    <h3>Hello, {user? user.email : 'Guest'}</h3>
                     <h2>Your Shopping Basket</h2>
-                    {basket.map((item => (
+                    {basket.length !== 0 ? basket.map((item => (
                         <CheckoutProduct
                             key={item.index}
                             id={item.id}
@@ -25,7 +25,7 @@ const Checkout = () => {
                             price={item.price}
                             image={item.image}
                         />
-                    )))}
+                    ))): <p>Your Shopping bag is empty. Start adding items!</p>}
                 </div>
             </div>
 

@@ -6,13 +6,43 @@
     position: relative;
 }
 
+@media only screen and (max-width: 600px){
+    .order > p {
+        font-size: 12px;
+    }
+}
+
+
+@media only screen and (max-width: 600px){
+    .order {
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 .order__id {
     position: absolute;
     top: 40px;
     right: 20px;
 }
 
+@media only screen and (max-width: 600px){
+    small {
+        position: relative;
+        top: 30px;
+    }
+}
+
 .order__total {
     font-weight: 500;
     text-align: right;
 }
+
+@media only screen and (max-width: 600px){
+    .order__total {
+        font-size: 14px;
+    }
+}
+

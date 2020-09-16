@@ -1,11 +1,32 @@
 .header {
-    height: 60px;
+
     display: flex;
     align-items: center;
     background-color: #131921;
     position: sticky;
     top: 0;
     z-index: 100;
+    padding: 10px 0;
+}
+
+.header__top {
+    display: flex;
+    flex: 1;
+}
+
+@media only screen and (max-width: 600px){
+    .header__top {
+        width: 90%;
+        padding: 10px;
+
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .header {
+        flex-direction: column;
+
+    }
 }
 
 .header__logo {
@@ -55,6 +76,15 @@
 .header__nav {
     display: flex;
     justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 600px){
+    .header__nav {
+        justify-content: space-between;
+        padding: 10px;
+        width: 100%;
+
+    }
 }
 
 .header__option {

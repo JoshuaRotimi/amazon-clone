@@ -3,6 +3,7 @@ import './App.css';
 import Header from "./components/Header";
 import Home from "./components/Home";
 import Checkout from "./components/Checkout";
+import Footer from "./components/Footer";
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Login from "./components/Login";
 import {auth} from "./firebase";
@@ -47,24 +48,27 @@ function App() {
                   <Route path='/checkout'>
                       <Header/>
                       <Checkout/>
+                      <Footer/>
                   </Route>
                   <Route path='/orders'>
                       <Header/>
                       <Orders/>
+                      <Footer/>
                   </Route>
                   <Route path='/payment'>
                       <Header/>
                       <Elements stripe={promise}>
                           <Payment/>
                       </Elements>
+                      <Footer/>
                   </Route>
                   <Route path={'/login'}>
-                      <h1>Log In Page</h1>
                       <Login/>
                   </Route>
                   <Route path='/'>
                       <Header/>
                       <Home/>
+                      <Footer/>
                   </Route>
 
               </Switch>

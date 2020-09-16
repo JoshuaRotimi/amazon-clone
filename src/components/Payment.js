@@ -40,6 +40,9 @@ const Payment = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        if (!user) {
+            alert('You need to be signed in first!')
+        }
         setProcessing(true);
 
         const payload = await stripe.confirmCardPayment(clientSecret, {
@@ -87,7 +90,7 @@ const Payment = () => {
                         <h3>Delivery Address</h3>
                     </div>
                     <div className='payment__address'>
-                        <p>{user?.email}</p>
+                        <p>Hello, {user? user.email: 'Guest'}</p>
                         <p>123 React Lane</p>
                         <p>Los Angeles, CA</p>
                     </div>
